@@ -1,4 +1,4 @@
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwXF7yXNiUQk9DDum7JNzphjmb_JxWWEICbIJKRMYJNlnXzjgUZA0U4OSROxBvkX-ak/exec"
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzxwJjneQliGCmIQ5FicyPb9E2V3m5nZ5NbDQFAAEdo0cKE4lg4nhGB9-3quFerIWF0/exec"
 async function submitAllData() {
     const submitBtn = document.getElementById('submit-btn');
     try {
