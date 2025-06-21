@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استبيان الاكتئاب الصوتي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>استبيان الصحة النفسية</h1>
+        
+        <div id="consent-section">
+            <p>هذا البحث يهدف إلى تطوير أدوات للكشف عن الاكتئاب من خلال الصوت. جميع البيانات ستكون مجهولة الهوية.</p>
+            <button id="consent-btn">أوافق على المشاركة</button>
+        </div>
+
+        <div id="demographics-section" class="hidden">
+            <h2>المعلومات الأساسية</h2>
+            <div class="form-group">
+                <label>العمر:</label>
+                <input type="number" id="age" min="18" max="100" required>
+            </div>
+            <div class="form-group">
+                <label>الجنس:</label>
+                <select id="gender" required>
+                    <option value="">-- اختر --</option>
+                    <option value="male">ذكر</option>
+                    <option value="female">أنثى</option>
+                    <option value="other">أخرى</option>
+                </select>
+            </div>
+            <button id="demographics-next">التالي</button>
+        </div>
+
+        <div id="recording-section" class="hidden">
+            <h2>التسجيل الصوتي</h2>
+            <div id="question-text">يرجى التحدث عن شعورك العام خلال الأسبوعين الماضيين:</div>
+            <div class="recorder-box">
+                <button id="record-btn">بدء التسجيل</button>
+                <button id="stop-btn" disabled>إيقاف</button>
+                <button id="play-btn" disabled>تشغيل</button>
+                <button id="next-btn" disabled>التالي</button>
+            </div>
+            <audio id="audio-playback" controls class="hidden"></audio>
+            <div id="timer">00:00</div>
+            <div id="recording-status" class="hidden">
+                <span>✓ تم التسجيل بنجاح</span>
+                <span id="recording-size"></span>
+            </div>
+        </div>
+
+        <div id="phq9-section" class="hidden">
+            <h2>استبيان PHQ-9</h2>
+            <div id="phq-questions"></div>
+            <button id="submit-btn">إرسال الإجابات</button>
+        </div>
+
+        <div id="thank-you-section" class="hidden">
+            <h2>شكراً لمشاركتك!</h2>
+            <p>سيتم استخدام بياناتك لتحسين أدوات الكشف عن الاكتئاب.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
